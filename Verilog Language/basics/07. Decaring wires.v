@@ -9,5 +9,12 @@ module top_module(
 
     assign out = (a&b)|(c&d);
     assign out_n = ~((a&b)|(c&d));
-    
+    //////////////////////////////
+    //wire and1, and2, or1;
+    //assign and1 = a&b;
+    //assign and2 = c&d;
+    //assign or1 = and1|and2;
+    //assign out = or1;
+    //assign out_n = ~or1;
+    /////////////////////////////
 endmodule
