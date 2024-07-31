@@ -4,12 +4,12 @@ module top_module(
     output wire [7:0] out_hi,
     output wire [7:0] out_lo );
   
-    //type1//
+//type1//
   
     assign out_hi = in[15:8];
     assign out_lo = in[7:0];
 
-  //type2//
+//type2//
   
   //assign {out_hi,out_lo} = in;
     
