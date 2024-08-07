@@ -8,10 +8,11 @@ module top_module(
     output reg out_always   ); 
     
     assign out_assign = (sel_b1==1&&sel_b2==1)?b:a;
+  //assign out_assign = ({sel_b1,sel_b2}==2'b11)?b:a; 
     
     always @ (*) begin
         if(sel_b1==1&&sel_b2==1)
-      //if({sel_b1,sel_b2==2'b11})
+      //if({sel_b1,sel_b2}==2'b11)
             out_always = b;
         else 
             out_always = a;
