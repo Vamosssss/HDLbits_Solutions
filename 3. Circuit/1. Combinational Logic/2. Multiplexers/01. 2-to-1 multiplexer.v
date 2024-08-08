@@ -9,4 +9,6 @@ module top_module(
         endcase
     end
 
+    //assign out = sel?a:b;
+
 endmodule
