@@ -41,4 +41,11 @@ module top_module(
     end
     
     assign sum = {sum_q,sum1};
+    
+    /* always @(*)
+        case(cout1)
+            1'b0 : sum = {sum2,sum1};
+            1'b1 : sum = {sum3,sum1};
+        endcase*/
+    
 endmodule
