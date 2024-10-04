@@ -4,7 +4,8 @@ module top_module ( input x, input y, output z );
     
     //xnor(z,x,y);
 
-    /* always @(*) begin
+    /* use concatenation and case
+    always @(*) begin
         case({x,y})
             2'b00 : z = 1;
             2'b10 : z = 0;
