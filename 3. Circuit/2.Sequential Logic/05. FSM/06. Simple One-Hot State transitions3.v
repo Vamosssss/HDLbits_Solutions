@@ -11,14 +11,16 @@ module top_module(
     assign next_state[B] = (state[A] & in) | (state[B] & in) | (state[D] & in);
     assign next_state[C] = (state[B] & ~in) | (state[D] & ~in);
     assign next_state[D] = state[C] & in;
+    
 
-  /* assign next_state[A] = state[0]&(~in) | state[2]&(~in);
+  /*assign next_state[A] = state[0]&(~in) | state[2]&(~in);
     assign next_state[B] = state[0]&in | state[1]&in | state[3]&in;
     assign next_state[C] = state[1]&(~in) | state[3]&(~in);
-    assign next_state[D] = state[2]&in;
-*/
+    assign next_state[D] = state[2]&in;  */
+
 
     // Output logic: 
+    
     assign out = (state[D]);
 
 endmodule
