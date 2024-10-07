@@ -16,5 +16,10 @@ module top_module(
         endcase
     end
    
-    assign out = (state==ON);
+    always@(*)
+        case(state)
+            OFF : out = 0;
+            ON : out = 1;
+        endcase
 endmodule
+
