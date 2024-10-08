@@ -30,6 +30,21 @@ module top_module(
  			FALL_R : next_state = (ground == 1) ? WALK_R : FALL_R;
  		endcase
  	end
+	
+	// WALK_L : next_state = (ground == 0) ? FALL_L : ((bump_left == 1) ? WALK_R : WALK_L);
+        /*We can change if-else
+	
+	      if (ground == 0) begin
+                next_state = FALL_L;
+              end else begin
+               if (bump_left == 1) begin
+                 next_state = WALK_R;
+              end else begin
+                 next_state = WALK_L;
+               end
+	       */
+
+	
 
  	assign walk_left = (state == WALK_L);
  	assign walk_right = (state == WALK_R);
