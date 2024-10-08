@@ -5,7 +5,7 @@ module top_module(
     output out); //
 	
     reg [2:0] state, next_state;
-    parameter A = 1, B = 2, C = 3, D = 4;
+    parameter A = 3'b000, B = 2'b001, C = 2'b011, D = 3'b100;
     
     // State transition logic
     always @(*) begin
