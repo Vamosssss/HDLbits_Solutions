@@ -43,23 +43,23 @@ module top_module(
   
   /* We can use if-else when we should consider many status
   
-  WALK_L : begin
-                if(!ground) next = FALL_L;
+            WALK_L : begin     
+                if(!ground) next_state = FALL_L;
                 else begin
-                    if(dig) next = DIG_L;
+                    if(dig) next_state = DIG_L;
                     else begin
-                        if(bump_left) next = WALK_R;
-                        else next = WALK_L;
+                        if(bump_left) next_state = WALK_R;
+                        else next_state = WALK_L;
                     end
                 end
             end
             WALK_R : begin
-                if(!ground) next = FALL_R;
+                if(!ground) next_state = FALL_R;
                 else begin
-                    if(dig) next = DIG_R;
+                    if(dig) next_state = DIG_R;
                     else begin
-                        if(bump_right) next = WALK_L;
-                        else next = WALK_R;
+                        if(bump_right) next_state = WALK_L;
+                        else next_state = WALK_R;
                     end
                 end
             end
